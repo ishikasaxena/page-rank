@@ -1,9 +1,6 @@
 # page-rank
 A Python implementation of the Page Rank algorithm with Markov Chains
 
-## Web Graph from Test Case 1 from pageRank.py
-
-
 ## Key Terms
 #### Directed Graph </br>
 A directed graph is a collection of nodes and edges (the edges are the connections between the nodes, or objects). A web graph is a specific type of directed graph, in which the nodes are web pages and the edges are the hyperlinks between/on pages (ex: a hyperlink on an HTML web page represents this page linking to some other external page).
@@ -30,8 +27,11 @@ A node that has no outgoing edges is a dangling node so no other state can be re
 An irreducible graph is when any node is reachable from any other node following the links of the web graph. A reducible graph is the opposite: it has a set of nodes that have no out-links, causing the random walker to become stuck once it reaches any node part of this set.
 
 #### Damping Matrix (also called the Google Matrix)
-A matrix that accounts for the possibility of a reducible graph and remedies the situation by having a damping factor *d* that allows the random walker to move to any random node from its current node with probability *d* and, to account for reducibility, the walker surfs to a random page (from a set of "stuck" nodes) with probability *1-d*.
+A matrix that accounts for the possibility of a reducible graph and remedies the situation by having a damping factor *d* that allows the random walker to move to any random node from its current node with probability *d* and, to account for reducibility, the walker surfs to a random page (from a set of "stuck" nodes) with probability *1-d*. </br>
 Formula: Damping Matrix = *d*A + *1-d*Q  </br>
 where A is a square stochastic matrix (altered for dangling nodes) and Q is a square matrix (with the same dimensions as A), with each entry as *1/n* (n = number of nodes).
+
+## Web Graph from Test Case 1 from pageRank.py
+<img width="352" alt="Screen Shot 2019-12-28 at 8 39 26 PM" src="https://user-images.githubusercontent.com/56605721/71570159-5f962c80-2aa1-11ea-88f6-00cfde82fcbf.png">
 
 [here]:https://stanford.edu/class/ee363/lectures/pf.pdf
