@@ -57,8 +57,8 @@ def findSteadyState(M, n):
 
 def pageRank(A):
     n = len(A) # n = num of rows/cols in A
-    A = normalizeAdjacencyMatrix(A) # transform it into an adjacency matrix
-    M = dampingMatrix(A) # transform it into a damping matrix
+    A = normalizeAdjacencyMatrix(A) 
+    M = dampingMatrix(A) 
     
     # find steady state vector
     steadyStateVectorOfA = findSteadyState(M, n)
